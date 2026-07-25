@@ -89,9 +89,25 @@ git commit -m "Initial commit, v0.1.0
 "
 ```
 
+Post commit confirmation
+
+```bash
+git status
+```
+
+Output example:
+
+```bash
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+```
+
 ### Tag and push
 
-Use `-u` on this first push only:
+Use `-u` on this **first push only**:
 
 ```bash
 git tag v0.1.0
@@ -111,7 +127,36 @@ Use this for every release after the initial commit.
 python3 bump-version.py patch
 ```
 
+Output example:
+
+```bash
+VERSION: 0.1.0 -> 0.1.1
+```
+
 Or `minor`, `major`, or an explicit version. This updates the `VERSION` file and nothing else.
+
+Confirm version bump
+
+```bash
+git status
+```
+
+Output example
+
+```bash
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   VERSION
+	modified:   docs/en/devops/commit-and-versioning-workflow-v0-1-1.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Note: Since I am updating this file it shows up in addition to our version bump.
 
 ### Stage and review
 
