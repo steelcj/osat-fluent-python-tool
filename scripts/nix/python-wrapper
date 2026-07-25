@@ -1,0 +1,3 @@
+#!/bin/sh
+# Rendered by install-python.py. Do not edit; re-run the installer instead.
+exec "{interpreter}" "$@"
