@@ -1,16 +1,16 @@
 ---
-dcterms:title: "Commit and Versioning Workflow"
+dc:title: "Commit and Versioning Workflow"
 dcterms:version: "0.1.1"
-dcterms:creator: "Christopher Steel"
-dcterms:description: "Practical workflow for commits and version bumps: initial commit, and every subsequent version bump after that."
+dc:creator: "Christopher Steel"
+dc:description: "Practical workflow for commits and version bumps: initial commit, and every subsequent version bump after that."
 dcterms:created: "2026-07-24"
 dcterms:modified: "2026-07-25"
-dcterms:format: "text/markdown"
-dcterms:language: "en"
+dc:format: "text/markdown"
+dc:language: "en"
 sat:language_bcp47: "en"
-dcterms:identifier: "commit-and-versioning-workflow"
+dc:identifier: "commit-and-versioning-workflow"
 dcterms:rightsHolder: "Christopher Steel"
-dcterms:rights: >
+dc:rights: >
   Copyright 2026 Christopher Steel.
   SPDX-License-Identifier: AGPL-3.0-or-later
 sat:uuid: ""
@@ -183,12 +183,17 @@ git commit -m "Bump version to 0.1.1
 If additional files are included:
 
 ```bash
-git commit -m "Bump version to 0.1.1
-
-	modified:   VERSION
-	new file:   en/docs/guides/some-new-guide-v0-1-0.md
-	deleted:    en/docs/guides/some-old-guide-v0-1-0.md
+ git commit -m "Bump version to 0.1.1 
+        modified:   VERSION
+        modified:   docs/en/devops/commit-and-versioning-workflow-v0-1-1.md
 "
+```
+
+Output example:
+
+```bash
+[main 98a3af4] Bump version to 0.1.1 	modified:   VERSION 	modified:   docs/en/devops/commit-and-versioning-workflow-v0-1-1.md
+ 2 files changed, 47 insertions(+), 2 deletions(-)
 ```
 
 ### Tag and push
